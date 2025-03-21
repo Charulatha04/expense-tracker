@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Expense Tracker</h1>
+
+  <!-- 🌙 Dark Mode Toggle -->
+  <button id="darkModeToggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+  <!-- 💰 Income Section -->
+  <div class="income-form">
+    <input type="number" id="incomeAmount" placeholder="Enter Income (₹)">
+    <button onclick="addIncome()">Add Income</button>
+  </div>
+
+  <!-- ✅ Display Income, Expense, Balance -->
+  <h2>Total Income: ₹<span id="totalIncome">0</span></h2>
+  <h2>Total Expenses: ₹<span id="totalExpenses">0</span></h2>
+  <h2>Balance: ₹<span id="balance">0</span></h2>
+
+  <!-- 🔔 Budget Limit Section -->
+  <div class="budget-limit">
+    <input type="number" id="budgetLimit" placeholder="Set Budget Limit (₹)">
+    <button onclick="setBudgetLimit()">Set Budget</button>
+  </div>
+
+  <!-- ⚠️ Budget Warning -->
+  <p id="budgetWarning"></p>
+  <h3>Amount adding</h3>
+
+  <!-- 💰 Expense Form -->
+  <div class="expense-form">
+    <input type="number" id="amount" placeholder="Amount">
+    <select id="category">
+      <option value="">Select Category</option>
+      <option value="Food">Food</option>
+      <option value="Transport">Transport</option>
+      <option value="Shopping">Shopping</option>
+      <option value="Bills">Bills</option>
+      <option value="Other">Other</option>
+    </select>
+    <input type="date" id="date">
+    <button onclick="addExpense()">Add</button>
+  </div>
+  <h3>Filtering Expenses</h3>
+  <!-- 🔍 Filter Form -->
+  <div class="filter-form">
+    <select id="filterCategory" onchange="filterExpenses()">
+      <option value="All">All Categories</option>
+      <option value="Food">Food</option>
+      <option value="Transport">Transport</option>
+      <option value="Shopping">Shopping</option>
+      <option value="Bills">Bills</option>
+      <option value="Other">Other</option>
+    </select>
+    <input type="date" id="startDate" onchange="filterExpenses()">
+    <input type="date" id="endDate" onchange="filterExpenses()">
+  </div>
+
+  <!-- ✅ Total Expense -->
+  <h2>Total: ₹<span id="total">0</span></h2>
+
+  <!-- 📋 Expense List -->
+  <ul id="expenseList"></ul>
+
+  <!-- 📥 Download CSV and Reset -->
+  <button onclick="downloadCSV()">📥 Download CSV</button>
+  <button onclick="resetAllData()" class="reset-btn">🔄 Reset All Data</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
