@@ -1,0 +1,172 @@
+/* 🌞 Light Mode */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background: url('lightbgblue.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    transition: background 0.5s ease-in-out, color 0.3s;
+}
+
+/* 🌙 Dark Mode with Glassmorphism */
+.dark-mode {
+    background: url('darkbgblue.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+}
+
+/* Frosted Glass Effect */
+.dark-mode .glass-container {
+    background: rgb(80, 70, 70);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🎯 Centered Layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* 💰 Forms in a Straight Line */
+.income-form, .expense-form, .budget-limit, .filter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    flex-wrap: nowrap;
+}
+
+/* 📝 Input Fields & Buttons */
+input, select, button {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 160px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Dark Mode Inputs */
+.dark-mode input, .dark-mode select, .dark-mode button {
+    background: rgb(0, 0, 0);
+    color: white;
+    border: 1px solid #ddd;
+}
+
+/* ✅ Buttons */
+button {
+    background: linear-gradient(45deg, #28a745, #218838);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border: none;
+    padding: 10px 15px;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #218838, #1a6d32);
+}
+
+/* ⚡ Dark Mode Buttons */
+.dark-mode button {
+    background: linear-gradient(45deg, #ff3e6b, #c91e4a);
+}
+
+.dark-mode button:hover {
+    background: linear-gradient(45deg, #c91e4a, #8b1431);
+}
+
+/* 🔥 Expense List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.8);
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Expense List */
+.dark-mode li {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 📊 Budget Progress Bar */
+.progress-container {
+    width: 100%;
+    max-width: 500px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 20px;
+    background: #dc3545;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Dark Mode Progress Bar */
+.dark-mode .progress-container {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .progress-bar {
+    background: #ff3e6b;
+}
+
+/* 🔄 Reset Button */
+button.reset-btn {
+    background-color: #dc3545;
+}
+
+button.reset-btn:hover {
+    background-color: #c82333;
+}
+
+/* Filter Form Styles */
+.filter-form {
+    margin: 20px 0;
+}
+
+.filter-form select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+.dark-mode .filter-form select {
+    background-color: #000000;
+    color: white;
+    border: 1px solid #fcf7f7;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .income-form, .expense-form, .budget-limit, .filter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input, select, button {
+        width: 100%;
+    }
+}
